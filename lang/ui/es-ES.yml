@@ -1,0 +1,17 @@
+# You can overwrite the locale name
+locale_name: Español
+style: estilo_espanol
+flag: es.png
+
+page_title: Spanish Page Title
+change_language: Cambia el idioma del sitio a
+change: Cambia
+#
+title: Título
+body: Contenido
+author: Author (in Spanish)
+published_date: Publication Date (in Spanish)
+create: Create (in Spanish)
+back: Back (in Spanish)
+edit: Edit (in Spanish)
+site_displayed_in: Sitio presentado en {language}

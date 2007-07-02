@@ -1,0 +1,7 @@
+#hd{text-align:center; font-size:1.5em; font-weight:bold; padding:0.2em; border: 1px solid #999;}
+a{color:#0A51AE;  text-decoration:none;}
+body{ background-color: #eee; font-family: helvetica;}
+#flash_message{ background-color: #666; padding:20px; text-align:center; font-size: 1.5em; color: #fff; border: 2px solid #999;}
+#css_info;{content: "default css";}
+#bd{ padding:0.5em; border: 1px solid #999; background-color: #fff;}
+#ft{ padding:1em; border: 1px solid #999; text-align:center;}

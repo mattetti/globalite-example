@@ -1,0 +1,23 @@
+<p>
+  <b><%= :title.l('title (translation replacement)') %>:</b>
+  <%=h @page.title %>
+</p>
+
+<p>
+  <b><%= :body.l('body (translation replacement)') %>:</b>
+  <%=h @page.body %>
+</p>
+
+<p>
+  <b><%= :author.l(:author.l_in('en-*')) %>:</b>
+  <%=h @page.author %>
+</p>
+
+<p>
+  <b><%= :published_date.l(:published_date.l_in('en-*')) %>:</b>
+  <%=h @page.published_date %>
+</p>
+
+
+<%= link_to :edit.l(:edit.l_in('en-*')), edit_page_path(@page) %> |
+<%= link_to :back.l(:back.l_in('en-*')), pages_path %>

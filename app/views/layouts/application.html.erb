@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<title><%= :page_title.l %></title>
+
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+	<meta name="author" content="Matt Aimonetti" />
+	<meta name="keywords" content="globalite, example" />
+	<meta name="description" content="a globalite project example" />
+	<meta name="robots" content="index, follow, noarchive" />
+	<meta name="googlebot" content="noarchive" />
+
+	<%= javascript_include_tag  :defaults %>
+	<%= stylesheet_link_tag  :style.l('default_style') %>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.2.2/build/grids/grids-min.css">  
+
+
+</head>
+
+<body>
+	<div id="doc" class="yui-t7">
+		<div id="hd">
+		  <%= image_tag(:flag.l('us.png'), :title => :locale_name.l) %>
+      <%=  link_to("Globalite | #{:page_title.l}", '/' ) %>
+      <%= image_tag(:flag.l('us.png'), :title => :locale_name.l) %>
+		</div>
+		<div id="css_info">
+		  &nbsp;
+		</div>
+
+    <%= flash[:before] %>
+		<div id="bd" style="clear:both">
+			<% if flash[:message]  %>
+				<div id="flash_message"><%= h flash[:message] %></div>
+			<% end -%>
+
+			<%= yield :layout %>
+
+		</div>
+		<br/>
+		<div id="ft">
+		  <div id='language_chooser'>
+		  <% form_tag @current_path, :method => @request_method do -%>
+          <span><%= :change_language.l %>:  
+          <%= select('user_locale', "code",  Globalite.ui_locales, { :include_blank => true }) %>  
+          &nbsp;
+          <%= submit_tag :change.l %></span>
+        <% end -%>
+      </div>  
+			<br/>
+      <div><%= link_to :example_page.l('Rails Core Localization example page'), '/pages/examples'%></div>
+      <br/>
+      <div><%=  link_to("back to the home page", '/' ) %></div>
+      <br/>
+			<%= :site_displayed_in.l_with_args(:language => :locale_name.l ) %> <%= image_tag(:flag.l('us.png'), :title => :locale_name.l) %>
+			| Copyright &copy; <%= Time.now.year %> - <a href='http://railsontherun.com'>matt aimonetti - m|a </a>
+		</div>
+	</div>
+</body>
+
+</html>

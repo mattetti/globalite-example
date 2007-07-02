@@ -1,0 +1,26 @@
+<h1><%= :listing_pages.l('Listing pages') %></h1>
+
+<table>
+  <tr>
+    <th><%= :title.l('Title') %></th>
+    <th><%= :body.l('Body') %></th>
+    <th><%= :author.l('Author') %></th>
+    <th><%= :published_date.l('Published Date') %></th>
+  </tr>
+
+<% for page in @pages %>
+  <tr>
+    <td><%=h page.title %></td>
+    <td><%=h page.body %></td>
+    <td><%=h page.author %></td>
+    <td><%=h page.published_date %></td>
+    <td><%= link_to :show.l('show (translation missing)'), page %></td>
+    <td><%= link_to :edit.l('edit (translation missing)'), edit_page_path(page) %></td>
+    <td><%= link_to :destroy.l('destroy (translation missing)'), page, :confirm => :are_you_sure.l('Are you sure?  (translation missing)'), :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to :new_page.l('New page (translation missing)'), new_page_path %>

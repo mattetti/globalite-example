@@ -1,0 +1,17 @@
+# If the locale isn't a full locale such as fr-FR or if the rails localization doesn't exist, 
+# you should define the locale_name key for globalite to display the UI locales properly.
+locale_name: English
+flag: us.png
+
+page_title: English Page Title
+change_language: Change the site Language to
+change: Change
+#
+title: Title
+body: Body
+author: Author
+published_date: Publication Date
+create: Create
+back: Back
+edit: Edit
+site_displayed_in: Site Displayed in {language}

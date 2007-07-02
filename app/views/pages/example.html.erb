@@ -1,0 +1,76 @@
+<h2>RAILS CORE LOCALIZATION EXAMPLES</h2>
+Look at app/views/pages/example.html.erb to see the code used
+<br/>
+
+<% form_for(@page) do |f| %>
+<br/>
+<fieldset> 
+  <legend>text_field | text_area</legend>
+  <p>
+    <b><%= :title.l %></b><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <b><%= :body.l %></b><br />
+    <%= f.text_area :body %>
+  </p>
+</fieldset>  
+<br/>
+
+<fieldset> 
+  <legend>date_select</legend>
+  <b><%= :published_date.l %></b><br />
+  <%= f.date_select :published_date, :locale => @locale %>
+</fieldset> 
+<br/>
+
+<fieldset> 
+  <legend>datetime_select</legend>
+  <b><%= :published_date.l %> with time </b><br />
+  <%= f.datetime_select :published_date %>
+</fieldset> 
+<br/>
+
+<fieldset> 
+  <legend>select_month</legend> 
+  <div id="select_month">
+    <%= select_month(Time.now) %>
+  </div>
+</fieldset>
+<br/>
+
+<fieldset> 
+  <legend>time</legend> 
+  Long Format: <b><%= Time.now.l(:long) %></b> <br/>
+  Short Format: <b><%= Time.now.l(:short) %></b> <br/>
+  Custom Format: <b><%= Time.now.l('%a, %A, %d %b %B %Y %H:%M:%S %p %z')%></b>
+</fieldset>
+<br/>
+
+<fieldset>
+  <legend>date</legend>
+  <div><%= Date.new(2007,05,13).l(:long) %></div>
+</fieldset>
+<br/>
+
+<fieldset>
+  <legend>country_select</legend>
+  <%= f.country_select('body') %>
+</fieldset>
+<br/>
+
+<fieldset>
+  <legend>number_to_currency</legend>
+  <%= number_to_currency(9999.99) %>
+</fieldset>
+<br/>
+
+<fieldset>
+  <legend>to_sentence</legend>
+  <%= ['Heidi', 'Matt', :friends.l('friends')].to_sentence %> <%= :wonderful_people.l('are wonderful people') %>
+</fieldset>
+<% end %>
+<br/>
+<br/>
+<br/>
