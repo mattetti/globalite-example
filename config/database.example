@@ -17,6 +17,7 @@ development:
   database: globalite_development
   username: root
   password:
+  #host: localhost
   socket: /opt/local/var/run/mysql5/mysqld.sock
 
 # Warning: The database defined as 'test' will be erased and
@@ -28,6 +29,7 @@ test:
   database: globalite_test
   username: root
   password:
+  #host: localhost
   socket: /opt/local/var/run/mysql5/mysqld.sock
 
 production:
@@ -36,4 +38,5 @@ production:
   database: globalite_production
   username: root
   password: 
+  #host: localhost
   socket: /opt/local/var/run/mysql5/mysqld.sock
