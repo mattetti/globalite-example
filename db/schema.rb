@@ -13,11 +13,4 @@ ActiveRecord::Schema.define(:version => 1) do
     t.datetime "updated_at"
   end
 
-  create_table "translation_pages", :force => true do |t|
-    t.integer "page_id"
-    t.string  "title"
-    t.text    "content"
-    t.string  "lang"
-  end
-
 end
