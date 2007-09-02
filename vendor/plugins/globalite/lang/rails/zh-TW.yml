@@ -1,114 +1,114 @@
-locale_name: English (USA)
+locale_name: 台灣 (Taiwan)
 # ActiveRecord::Errors.default_error_messages
-error_message_inclusion: is not included in the list
-error_message_exclusion: is reserved
-error_message_invalid: is invalid
-error_message_confirmation: doesn't match confirmation
-error_message_accepted: must be accepted
-error_message_empty: can't be empty
-error_message_blank: can't be blank
-error_message_too_long: is too long (maximum is %d characters)
-error_message_too_short: is too short (minimum is %d characters)
-error_message_wrong_length: is the wrong length (should be %d characters)
-error_message_taken: has already been taken
-error_message_not_a_number: is not a number
+error_message_inclusion: 不在指定的名單上
+error_message_exclusion: 已在指定的名單上
+error_message_invalid: 是錯誤的資料
+error_message_confirmation: 與指定值不同
+error_message_accepted: 必須要選擇接受指定的條款
+error_message_empty: 不能不填
+error_message_blank: 不能是空白
+error_message_too_long: 太長 (最多 %d 個字元)
+error_message_too_short: 太短 (最少 %d 個字元)
+error_message_wrong_length: 長度不正確 (應該要 %d 個字元)
+error_message_taken: 已經有人使用
+error_message_not_a_number: 不是數字
+
+# used by ActionView::Helpers::ActiveRecordHelper.error_messages_for
+active_record_helper_header_message: 輸入資訊錯誤
+active_record_helper_error_description: 請更正下列問題,
 
 # used by ActionView::Helpers::DateHelper.distance_of_time_in_words
-date_helper_less_than_x_seconds: less than %d seconds
-date_helper_half_a_minute: half a minute
-date_helper_less_than_a_minute: less than a minute
-date_helper_one_minute: 1 minute
-date_helper_x_minutes: %d minutes
-date_helper_one_hour: about 1 hour
-date_helper_x_hours: about %d hours
-date_helper_one_day: 1 day
-date_helper_x_days: %d days
-date_helper_one_month: 1 month
-date_helper_x_months: %d months
-date_helper_one_year: 1 year
-date_helper_x_years: %d years
+date_helper_less_than_x_seconds: 少於 %d 秒
+date_helper_half_a_minute: 30 秒
+date_helper_less_than_a_minute: 少於一分鐘
+date_helper_one_minute: 一分鐘
+date_helper_x_minutes: %d 分鐘
+date_helper_one_hour: 約 1 小時
+date_helper_x_hours: 約 %d 小時
+date_helper_one_day: 1 天
+date_helper_x_days: %d 天
+date_helper_one_month: 1 個月
+date_helper_x_months: %d 個月
+date_helper_one_year: 1 年
+date_helper_x_years: %d 年
 
 # DON'T TRANSLATE, just order
-date_helper_order: [:year, :month, :day] #default Rails is US ordered: :order => [:year, :month, :day]
+date_helper_order: [:day, :month, :year] #default Rails is US ordered: :order => [:year, :month, :day]
 
 date_helper_date_formats: # DON'T  TRANSLATE, RE ORDER
-  default: "%Y-%m-%d"
+  default: "%Y/%m/%d"
   short: "%b %e"
-  long: "%B %e, %Y"
+  long: "%b %e, %Y"
 
 date_helper_time_formats: # DON'T  TRANSLATE, RE ORDER
-  default: "%a, %d %b %Y %H:%M:%S %z"
-  short: "%d %b %H:%M"
-  long: "%B %d, %Y %H:%M"
+  default: "%a, %Y %b %d %H:%M:%S %z"
+  short: "%b %d, %H:%M"
+  long: "%Y/%b/%d %H:%M"
 
 # added at the end of date if your date system doesn't use a 24 hours system
 date_helper_am: am
 date_helper_pm: pm
-    
+
 # used by ActionView::Helpers::NumberHelper.number_to_currency
-number_helper_unit: "$"
+number_helper_unit: "NT$"
 number_helper_separator: "." #unit separator (between integer part and fraction part)
-number_helper_delimiter: "," #delimiter between each group of thousands. Example: 1.234.567 
-number_helper_order: [ unit, number ] 
+number_helper_delimiter: "," #delimiter between each group of thousands. Example: 1.234.567
+number_helper_order: [ unit, number ]
 #to support for instance French format, the order is different: Unit comes last (ex. "1.234,00 €")
 
 # use by +Array#to_sentence()+
-array_connector: 'and'
-array_skip_last_comma: 'false'
-
-# Active Record error messages:
-active_record_helper_error_description: 'There were problems with the following fields:'
-active_record_helper_header_message: #{pluralize({error_count}, 'error')} prohibited this {failed_object} from being saved
+array_connector: '和'
+array_skip_last_comma: 'true'
 
 date_helper_month_names:
  -              # Leave that line
    -            # Leave that line
- - January
- - February
- - March
- - April
- - May
- - June
- - July
- - August
- - September
- - October
- - November
- - December
+ - 一月
+ - 二月
+ - 三月
+ - 四月
+ - 五月
+ - 六月
+ - 七月
+ - 八月
+ - 九月
+ - 十月
+ - 十一月
+ - 十二月
 
 date_helper_abbr_month_names:
   -             # Leave that line
     -           # Leave that line
-  - Jan
-  - Feb
-  - Mar
-  - Apr
-  - May
-  - Jun
-  - Jul
-  - Aug
-  - Sep
-  - Oct
-  - Nov
-  - Dec
+  - 1月
+  - 2月
+  - 3月
+  - 4月
+  - 5月
+  - 6月
+  - 7月
+  - 8月
+  - 9月
+  - 10月
+  - 11月
+  - 12月
 
-date_helper_day_names: 
-  - Sunday
-  - Monday
-  - Tuesday
-  - Wednesday
-  - Thursday
-  - Friday
-  - Saturday
+date_helper_day_names:
+  - 星期天
+  - 星期一
+  - 星期二
+  - 星期三
+  - 星期四
+  - 星期五
+  - 星期六
 
-date_helper_abbr_day_names: 
-  - Sun
-  - Mon
-  - Tue
-  - Wed
-  - Thu
-  - Fri 
-  - Sat
+date_helper_abbr_day_names:
+  - 周日
+  - 周一
+  - 周二
+  - 周三
+  - 周四
+  - 周五
+  - 周六
 
 countries_list:
   - Afghanistan
@@ -130,7 +130,7 @@ countries_list:
   - Bahrain
   - Bangladesh
   - Barbados
-  - Belarus 
+  - Belarus
   - Belgium
   - Belize
   - Benin
@@ -141,7 +141,7 @@ countries_list:
   - Botswana
   - Bouvet Island
   - Brazil
-  - British Indian Ocean Territory 
+  - British Indian Ocean Territory
   - Brunei Darussalam
   - Bulgaria
   - Burkina Faso
@@ -192,7 +192,7 @@ countries_list:
   - French Polynesia
   - French Southern Territories
   - Gabon
-  - Gambia 
+  - Gambia
   - Georgia
   - Germany
   - Ghana
@@ -212,7 +212,7 @@ countries_list:
   - Honduras
   - Hong Kong
   - Hungary
-  - Iceland 
+  - Iceland
   - India
   - Indonesia
   - Ireland
