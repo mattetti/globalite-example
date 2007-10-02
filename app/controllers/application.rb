@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
 
   # Get a sorted array of the navigator languages
   def get_sorted_langs_from_accept_header
-    accept_langs = request.env['HTTP_ACCEPT_LANGUAGE'].split(/,/) rescue nil
+    accept_langs = (request.env['HTTP_ACCEPT_LANGUAGE'] || "en-us,en;q=0.5").split(/,/) rescue nil
     return nil unless accept_langs
 
     # Extract langs and sort by weight
