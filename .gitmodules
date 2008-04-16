@@ -4,3 +4,6 @@
 [submodule "vendor/plugins/globalite"]
 	path = vendor/plugins/globalite
 	url = git://github.com/matta/globalite.git
+[submodule "vendor/plugins/rspec"]
+	path = vendor/plugins/rspec
+	url = git://github.com/dchelimsky/rspec.git
