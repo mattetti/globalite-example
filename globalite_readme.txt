@@ -3,6 +3,10 @@
 
 == getting started
 
+update the globalite-plugin
+
+    git submodules update
+
 start by bootstraping the app:
     
     rake bootstrap
@@ -10,3 +14,4 @@ start by bootstraping the app:
 You're app is now ready, just start it by typing
 
     script/server
+    
