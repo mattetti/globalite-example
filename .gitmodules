@@ -9,4 +9,4 @@
 	url = git://github.com/dchelimsky/rspec-rails.git
 [submodule "vendor/plugins/globalite"]
 	path = vendor/plugins/globalite
-	url = git://github.com/matta/globalite.git
+	url = git://github.com/mattetti/globalite.git
