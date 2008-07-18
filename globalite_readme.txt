@@ -5,7 +5,8 @@
 
 update the globalite-plugin
 
-    git submodules update
+    git submodule init
+    git submodule update
 
 start by bootstraping the app:
     
